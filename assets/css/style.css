@@ -1,0 +1,62 @@
+#addTrainBorder {
+    border-style: solid;
+    border-color: #f8f9fa;
+    border-width: 2px;
+    background-color: #343a40;
+    opacity: .83;
+}
+
+.lead {
+    font-style: italic;
+}
+
+.table {
+    opacity: .88;
+}
+
+.panel {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    opacity: 0.83;
+}
+
+#addTrainHeader {
+    background-color: #868e96;
+    padding-left: 10px;
+    color: #f8f9fa;
+}
+
+.push {
+    padding: 10px 20px;
+}
+
+.container {
+    background-image: url(../images/scrolls-bg.jpg);
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgHeader {
+
+    background-image: url(../images/hogwarts-express-2.jpg);
+    opacity: 0.88;
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+    font-weight: bolder;
+}
