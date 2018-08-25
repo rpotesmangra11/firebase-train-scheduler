@@ -1,11 +1,11 @@
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDl-VPdJKnKT14GxXI2GpAUwgyxaIz4bFA",
-    authDomain: "fir-train-scheduler-bd4e3.firebaseapp.com",
-    databaseURL: "https://fir-train-scheduler-bd4e3.firebaseio.com",
-    projectId: "fir-train-scheduler-bd4e3",
-    storageBucket: "fir-train-scheduler-bd4e3.appspot.com",
-    messagingSenderId: "586810915038"
+ var config = {
+    apiKey: "AIzaSyBIKwNq0wtvr0-SossMp_-Iv2yOrRGDXYU",
+    authDomain: "fir-train-scheduler-488fc.firebaseapp.com",
+    databaseURL: "https://fir-train-scheduler-488fc.firebaseio.com",
+    projectId: "fir-train-scheduler-488fc",
+    storageBucket: "",
+    messagingSenderId: "651239585040"
   };
   firebase.initializeApp(config);
 
@@ -55,7 +55,7 @@ trainData.on("child_added", function(childSnapshot) {
     let trainFrequency = data.frequency;
     let theFirstTrain = data.firstTrain;
     console.log(theFirstTrain);
-    // Calculate the minutes until arrival using hardcore math
+    // Calculate the minutes until arrival using math
     // To calculate the minutes till arrival, take the current time in unix subtract the FirstTrain time and find the modulus between the difference and the frequency  
     let tRemainder = moment().diff(moment.unix(theFirstTrain), "minutes") % trainFrequency;
     let tMinutes = trainFrequency - tRemainder;
@@ -64,6 +64,9 @@ trainData.on("child_added", function(childSnapshot) {
     let tArrival = moment().add(tMinutes, "m").format("hh:mm A");
 
     // Add each train's data into the table 
-    $("#trainTable > tbody").append("<tr><td>" + trainNames + "</td><td>" + trainDestin + "</td><td class='min'>" + trainFrequency + "</td><td class='min'>" + tArrival + "</td><td class='min'>" + tMinutes + "</td></tr>");
+    $("#trainTable > tbody").append("<tr><td>" + trainNames + "</td><td>" + 
+    trainDestin + "</td><td class='min'>" + trainFrequency + 
+    "</td><td class='min'>" + tArrival + 
+    "</td><td class='min'>" + tMinutes + "</td></tr>");
 
 });
